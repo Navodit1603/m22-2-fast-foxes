@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+
+<head>
+    <div layout:fragment="metadata" th:remove="tag">
+        <title>FRQ1</title>
+    </div>
+</head>
+<body style="padding: 24px">
+<div layout:fragment="content" th:remove="tag">
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+      <div>
+          <h3 style="font-size: 72px">FRQ1</h3>
+          <h2>User can input a sequence and insert a segment or remove one</h2>
+          <hr>
+      </div>
+     <form action="/navodit/frq1" method="GET" id="frq3" style="text-align: center">
+    <h1>Original Number</h1>
+    <input type="text" name="sequence" placeholder="number segment">
+    <h2 th:text="${f.getSeq()}"></h2>
+
+    <br>
+
+    <h1>Insert Segment</h1>
+    <input type="text" name="insert" placeholder="insert segment">
+    <input type="number" name="index" placeholder="index">
+    <h2 th:text="${seq1}"></h2>
+
+    <br>
+
+   <h1>Delete Segment</h1>
+         <input type="text" name="delete" placeholder="Delete sequence segment">
+         <h2 th:text="${deleted}"></h2>
+
+    <br>
+
+    <h1>Update Sequence</h1>
+    <input type="text" name="update" placeholder="Update sequence segment">
+    <h2 th:text="${updated}"></h2>
+
+    <br>
+
+         <h1>Triangle</h1>
+         <input type="text" name="a" placeholder="First Side Length">
+         <input type="text" name="b" placeholder="Second Side Length">
+         <h2 th:text="${a}"></h2>
+         <h2 th:text="${b}"></h2>
+         <h2 th:text="${hyp}"></h2>
+
+         <br>
+         <div>
+             <button style="width:200px; background-color: #4CAF50; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 8px">
+                 Submit</button>
+         </div>
+
+
+
+
+
+     </form>
+    </div>
+    <br>
+    <br>
+    <div>
+        <script src="https://gist.github.com/Navodit1603/dd6e489d8c6c3fee7e5cd3e18bed824d.js"></script>
+    </div>
+
+
+</div>
+
+
+</body>
+</html>

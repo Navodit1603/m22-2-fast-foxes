@@ -1,0 +1,12 @@
+LightSequence gradshow = new LightSequence("0101 0101 0101");
+
+gradShow.display();
+
+gradShow.changeSequence("0011 0011 0011")
+
+String resultSeq = gradShow.insertSegment("1111 1111" , 4);
+
+String newSeq = oldSeq.substring(0,index) + oldSeq.substring(removeSubstringIndex + segment.length());
+
+= Math.sqrt(a*a+b*b);
+System.out.print(Math.sqrt(aa+bb));

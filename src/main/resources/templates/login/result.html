@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+
+
+
+
+<div layout:fragment="head" th:remove="tag">
+    <!-- Page specific head additions -->
+    <title>Person List</title>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+<div layout:fragment="body" th:remove="tag">
+
+    <div class="container">
+        <h1 th:text =" 'thymeLeaf '+ ${message} +' App'" ></h1>
+        <h1>Result</h1>
+
+        <!--
+        <p th:text="'id: ' + ${greeting.id}" />
+        <p th:text="'content: ' + ${greeting.content}" />
+        -->
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>EMail</th>
+                <th>Person</th>
+
+            </tr>
+            </thead>
+            <tbody>
+
+            <tr th:each="user : ${list}">
+
+
+                <td th:text="${user.id}">Person ID</td>
+                <td th:text="${user.name}">Name</td>
+                <td th:text="${user.salary}">Salary</td>
+                <td th:text="${user.teamName}">Team Name</td>
+                <!--
+                                <td th:if="${user.getAge() != -1}" th:text="${user.getAge()}">Age</td>
+                                <td th:unless="${user.getAge() != -1}" th:text="Unknown">Unknown Age</td>
+                -->
+
+            </tr>
+
+
+            </tbody>
+        </table>
+        -->
+
+    </div>
+</div>
+</html>
+

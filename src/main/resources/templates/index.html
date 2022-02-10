@@ -1,0 +1,90 @@
+<!-- This page is illustrative and contains ideas about HTML formatting -->
+<!DOCTYPE HTML>
+<!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+
+<head><div layout:fragment="metadata" th:remove="tag">
+    <title>Intro</title>
+</div></head>
+
+<!-- layout::fragment="content" is heart of ThymeLeaf layout -->
+<body><div layout:fragment="content" th:remove="tag">
+    <!-- Start of body content specific to page -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .parallax {
+            /* The image used */
+            background-image: url("images/dnslogo.png");
+
+            /* Set a specific height */
+            min-height: 1000px;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .articles {
+            margin: 60px 10%;
+            text-align: center;
+            font-family: 'Javanese Text';
+            color: black;
+            background-color: white;
+            border-radius: 25px;
+            padding: 40px 20px;
+        }
+    </style>
+    </head>
+
+    <body>
+    <div class="parallax"></div>
+    <div id="spring_intro" class="articles">
+
+        <h1><strong>Welcome to DN Stonks!</strong></h1>
+        <br>
+        <h3><strong>Vision:</strong></h3>
+        <br>
+        <ul style="color: black; list-style: none; font-size: 27px; ">
+            <li>Teaching students at Del Norte about the stock market/crypto currency interactively.</li>
+            <li>Del Norte Stonks(DNS) will provide a first-hand experience with the US stock market and shareholding.</li>
+            <li>On the website, students will learn and develop their general financial literacy skills.</li>
+        </ul>
+    </div>
+    <div class="d-flex flex-row justify-content-around w-75 m-auto">
+        <div id="spring_intro2" class="articles flex justify-content-start ml-0 ">
+
+            <h1><strong>Stocks</strong></h1>
+            <br>
+            <br>
+            <ul style="color: black; list-style: none; font-size: 27px; font-family: ">
+                <li>A security that represents the ownership of a fraction of a corporation.</li>
+                <li>A way to raise money to fund growth, products and other initiatives.</li>
+                <li>Real earning potential comes from the compound interest you earn on long-term holdings.</li>
+            </ul>
+        </div>
+        <div id="spring_intro3" class="articles flex justify-content-end mr-0 ">
+
+            <h1><strong>Crypto</strong></h1>
+            <br>
+            <br>
+            <ul style="color: black; list-style: none; font-size: 27px; ">
+                <li>Collection of binary data which works as a medium of exchange.</li>
+                <li>Form of payment that can be exchanged online for goods and services.</li>
+                <li>Fix the problems of traditional currencies by putting the power in the currency holders' hands.</li>
+                <a href="http://localhost:8080/crypto" class="btn-sm btn-dark"> Learn More </a>
+            </ul>
+        </div>
+    </div>
+    <!-- End of body content specific to page -->
+</div>
+
+
+</body>
+
+
+</html>
+
+

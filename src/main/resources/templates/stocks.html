@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Market</title>
+</head>
+<body>
+<table class="table">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Symbol</th>
+        <th>Name</th>
+        <th>Rank</th>
+        <th>Price USD</th>
+        <th>Percent Change 24h</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="x: ${ls}">
+        <td>
+            <p th:text="${x.id}"></p>
+        </td>
+        <td>
+            <p th:text="${x.symbol}"></p>
+        </td>
+        <td>
+            <p th:text="${x.name}"></p>
+        </td>
+        <td>
+            <p th:text="${x.rank}"></p>
+        </td>
+        <td>
+            <p th:text="${x.price_usd}"></p>
+        </td>
+        <td>
+            <p th:text="${x.percent_change_24h}"></p>
+        </td>
+
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

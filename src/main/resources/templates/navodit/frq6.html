@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+
+<head>
+    <div layout:fragment="metadata" th:remove="tag">
+        <title>Navodit's FRQ6</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+    </div>
+    <!-- layout::fragment="content" is heart of ThymeLeaf layout -->
+    <div layout:fragment="content" th:remove="tag">
+        <!-- Start of body content specific to page -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </div>
+
+
+</head>
+<body style="padding: 24px">
+<div layout:fragment="content" th:remove="tag">
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+        <div>
+            <h3 style="font-size: 72px">FRQ6</h3>
+            <h2>Users can input 6 words and the program will sort out words that end with -ing.</h2>
+            <hr>
+        </div>
+        <form action="/navodit/frq6" method="GET" id="frq6" style="text-align: center">
+            <h1>Enter 6 words</h1>
+            <br>
+            <input type="text" name="word1" placeholder="Write any word">
+            <input type="text" name="word2" placeholder="Write any word">
+            <input type="text" name="word3" placeholder="Write any word">
+            <input type="text" name="word4" placeholder="Write any word">
+            <input type="text" name="word5" placeholder="Write any word">
+            <input type="text" name="word6" placeholder="Write any word">
+            <br>
+            <br>
+            <div>
+                <button style="width:200px; background-color: #4CAF50; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 8px">
+                    Submit</button>
+            </div>
+            <br>
+            <br>
+            <div>
+                <h2 th:each="string : ${sorted}">
+                    <h2 th:text="${string}"></h2>
+                </h2>
+            </div>
+
+        </form>
+    </div>
+    <br>
+    <br>
+    <div>
+        <script src="https://gist.github.com/Navodit1603/b35d3445fe829e8d173fa41f73915d9d.js"></script>
+    </div>
+
+
+</div>
+
+
+</body>
+</html>

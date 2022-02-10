@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      xmlns="http://www.w3.org/1999/html"
+      layout:decorate="~{layout}" lang="en">
+
+<head>
+    <div layout:fragment="metadata" th:remove="tag">
+        <!-- Start of head content specific to page -->
+        <title>Greet</title>
+        <link rel="stylesheet" type="text/css" href="/css/greet.css">
+        <!-- End of head content specific to page -->
+    </div>
+    <link rel="stylesheet" href="greet.css">
+</head>
+
+<body><div layout:fragment="content" th:remove="tag">
+</head>
+<body>
+</br>
+</br>
+</br>
+</br>
+<h1 style="font-family: 'Javanese Text;'">Financial Facts</h1>
+</br>
+</br>
+</br>
+</br>
+<div id="container">
+    <button id="btn">press</button>
+    <div id="output"></div>
+</div>
+</br>
+</br>
+
+<script src="main.js"></script>
+</body>
+</html>
+
+<style>
+    body {
+        background: linear-gradient(to left, #418fbf, #4CAF50);
+    }
+
+    #container {
+        background-color: white;
+        border: 10px darkslategray;
+        height: 300px;
+        width: 750px;
+        margin: auto;
+        text-align: center;
+        border-radius: 30px;
+    }
+
+    h1 {
+        text-align: center;
+        color: antiquewhite;
+    }
+
+    h2 {
+        text-align: center;
+        color: antiquewhite;
+    }
+
+    #btn {
+        margin: 50px auto;
+        height: 50px;
+        width: 175px;
+        font-size: 22px;
+        background-color: palegreen;
+        text-overline-color: white;
+
+    }
+
+    #output {
+        margin: 25px auto;
+        font-size: 26px;
+        font-family: "Javanese Text";
+        color: black;
+    }
+</style>
+
+<script>
+    let btn = document.getElementById('btn');
+    let output = document.getElementById('output');
+    let teams = [
+        '61% of Americans don’t have enough savings to cover a $1,000 emergency',
+        '38 percent of U.S. households have credit card debt',
+        '33 percent of American adults have $0 saved for retirement',
+        '81% of Households Have at Least One Savings Account',
+        'People spend 12-18% more when using credit cards than when using cash, so try to stick with cash to curb unnecessary spending.',
+        'A retirement account worth $10,000 now, growing at 8% annually, will be worth over $46,600 in 20 years..',
+        'If you make money on an investment, you are only required to pay taxes on the capital gains (or the extra money earned), not the original amount you invested',
+    ];
+
+    btn.addEventListener('click', function(){
+        var randomTeam = teams[Math.floor(Math.random() * teams.length)]
+        output.innerHTML = randomTeam;
+    })
+</script>

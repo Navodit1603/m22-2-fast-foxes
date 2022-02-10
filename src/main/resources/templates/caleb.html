@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caleb About Me</title>
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<body>
+
+<div layout:fragment="content" th:remove="tag">
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h1 style="color: white; text-align: center;font-family: Webdings; ">JJJ</h1>
+    <h2 style="color: white; text-align: center; font-family: 'Javanese Text'; font-size: 80px;">I'm Caleb</h2>
+
+    <br>
+
+    <div style="text-align: center; background-color: white; border-radius: 100px; padding: 40px; width: 400px; margin: auto; font-family: 'Javanese Text';">
+        <a href="/caleb3" class="btn-sm btn-dark"> FRQ #2 </a>
+        <br/>
+        <br/>
+        <a href="/caleb2" class="btn-sm btn-dark"> FRQ #3 </a>
+        <br/>
+        <br/>
+        <a href="/caleb4" class="btn-sm btn-dark"> FRQ #4 </a>
+        <br/>
+        <br/>
+        <a href="/caleb5" class="btn-sm btn-dark"> FRQ #5 </a>
+        <br/>
+        <br/>
+        <a href="/caleb9" class="btn-sm btn-dark"> FRQ #9 </a>
+        <br/>
+        <br/>
+        <a href="/caleb10" class="btn-sm btn-dark"> FRQ #10 </a>
+
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <div class="frq-content" style="text-align: center;">
+        <p>View it on repl <u><a style="color: blue" target="_blank"
+                                 href="https://replit.com/@calebkimsd/FRQ6">here</a></u></p>
+        <iframe height="400px" width="100%" src="https://replit.com/@calebkimsd/FRQ6?lite=true"
+                scrolling="no" frameborder="yes" allowtransparency="true" allowfullscreen="true"></iframe>
+    </div><br>
+
+
+    <div class="frq-content" style="text-align: center;">
+        <p>View it on repl <u><a style="color: blue" target="_blank"
+                                 href="https://replit.com/@calebkimsd/FRQ7">here</a></u></p>
+        <iframe height="400px" width="100%" src="https://replit.com/@calebkimsd/FRQ7?lite=true"
+                scrolling="no" frameborder="yes" allowtransparency="true" allowfullscreen="true"></iframe>
+    </div><br>
+    <div>
+        <img id="img1" src="images/caleb/maskon.png" onclick="toggle()"
+             alt="maskon"
+             style="height: 540px; display: block; margin-left: auto; margin-right: auto;">
+    </div>
+    <script>
+        function toggle(){
+            var imgsrc = document.getElementById("img1").src;
+            if (imgsrc.indexOf("images/caleb/maskon.png")!== -1){
+                document.getElementById("img1").src = "images/caleb/maskoff.png";
+            }
+            else{
+                document.getElementById("img1").src = "images/caleb/maskon.png"
+            }
+        }
+    </script>
+    <div>
+
+    </div>
+    <div>
+        <br>
+        <br>
+        <form action="/caleb" method="GET" id="jokeForm">
+            <button  class="btn btn-outline-danger">CLICK ME</button>
+        </form>
+    </div>
+    <div>
+        <table style="color:white; font-max-size: large;" border="1">
+            <tr>
+                <th>Category</th>
+                <th>Question</th>
+                <th>Answer</th>
+            </tr>
+            <tr>
+                <td th:text="${joke[0].category}"> </td>
+                <td th:text="${joke[0].question}"> </td>
+                <td th:text="${joke[0].answer}"> </td>
+            </tr>
+        </table>
+    </div>
+    <script th:inline="javascript">
+        const news = [[${video}]]
+        console.log(news)
+    </script>
+
+
+    <div>
+
+        <br>
+        <br>
+        <br>
+
+        <div style="background-color: white; Text-align: center; border-radius: 500px; margin: auto; font-family: 'Javanese Text'; padding-: 200px; height: 200px; ">
+
+            <strong> More About Me</strong>
+            <h1> I play water polo and swim for Del Norte</h1>
+            <h1> I am 16 years old and love to learn new things </h1>
+            <h1> In my free time, I enjoy to play games, go surf, and hangout with friends</h1>
+            <div>
+                <br>
+                <br>
+                <a href="https://github.com/ChristopherDuroiu/usb-c/commits?author=calebkimsd">commits</a>
+                <br>
+                <a href ="https://github.com/ChristopherDuroiu/usb-c/issues/assigned/calebkimsd">issues</a>
+                <body>
+
+
+</html>

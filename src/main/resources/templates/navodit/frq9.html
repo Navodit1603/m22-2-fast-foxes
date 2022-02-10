@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+
+<head>
+    <div layout:fragment="metadata" th:remove="tag">
+        <title>Navodit's FRQ10</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+    </div>
+    <!-- layout::fragment="content" is heart of ThymeLeaf layout -->
+    <div layout:fragment="content" th:remove="tag">
+        <!-- Start of body content specific to page -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </div>
+
+
+</head>
+<body style="padding: 24px">
+<div layout:fragment="content" th:remove="tag">
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+        <h3 style="font-size: 72px">FRQ9</h3>
+        <h2>User can input 2 numbers and the program will return the Greatest Common Factor.</h2>
+        <hr>
+    </div>
+    <br>
+    <br>
+    <form action="/navodit/frq9" method="GET" id="frq9" style="text-align: center">
+        <h1>Enter First Number: </h1>
+        <br>
+        <input type="number" name="first" placeholder="First Number" style="width: 500px; height: 50px">
+        <br>
+        <br>
+        <h1>Enter Second Number: </h1>
+        <br>
+        <input type="number" name="second" placeholder="Second Number" style="width: 500px; height: 50px">
+        <br>
+        <br>
+        <div>
+            <button style="width:200px; background-color: #4CAF50; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 8px">
+                Submit</button>
+        </div>
+        <br>
+        <br>
+        <div>
+            <h2>First Number: </h2>
+            <h2 th:text="${first}"></h2>
+            <br>
+            <br>
+            <h2>Second Number: </h2>
+            <h2 th:text="${second}"></h2>
+            <br>
+            <br>
+            <h2>GCF: </h2>
+            <h2 th:text="${gcf}"></h2>
+            <br>
+            <br>
+            <h2>Simplified Fraction: </h2>
+            <h2 th:text="${simplified}"></h2>
+            <br>
+            <br>
+        </div>
+    </form>
+<br>
+    <br>
+    <div>
+        <script src="https://gist.github.com/Navodit1603/01e1f589dabaf1328e9293c479a18590.js"></script>
+    </div>
+</div>
+<div>
+</body>
+</html>

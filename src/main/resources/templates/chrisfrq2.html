@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chris FRQs</title>
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<body>
+<br/>
+<br/>
+<br/>
+<br/>
+<h1 style=" text-align: center; font-family: 'Javanese Text'"strong> FRQ #2 </h1>
+<h1 style="text-align: center; font-weight: bold; font-family: 'Javanese Text'"><b>What are you eating for dinner today??? CHICKEN BEEF PASTA FISH</b>
+</h1>
+
+<br>
+
+<div style="text-align: center;" class="part-e">
+
+    <div class="frq-content">
+        <form action="/chrisfrq2" method="GET"
+              id="frqForm">
+            <div class="frq-form">
+                <br/>
+
+                <input type="checkbox" style="color: red;" checked="checked" name="rsvp"/>
+                <label> CLICK ME IF YOU WANT TO EAT PROTEIN </label><br>
+
+
+                <br>
+
+                <p for="frqField"> GIVE ME A NUMBER </p>
+
+                <input style="background-color: mediumpurple;"
+                       name="selection" id="frqField">
+                <br/>
+                <br/>
+                <button  class="btn btn-outline-danger">CLICK ME</button>
+                <br/>
+                <br/>
+                <!--/*@thymesVar id="option1" type=""*/-->
+                <p th:text="'DINNER: ' + ${option1}"></p>
+            </div>
+        </form>
+    </div>
+</div>
+
+</div>
+<hr>
+</body>
+</html>

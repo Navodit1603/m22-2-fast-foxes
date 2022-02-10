@@ -1,0 +1,90 @@
+Question 1
+
+Assume that the following variables have been properly declared and initialized.
+
+a boolean variable named rsvp
+an int variable named selection, where 1 represents "beef", 2 represents "chicken", 3 represents "pasta", and all other values represent "fish"
+a String variable named option1
+a String variable named option2
+
+(a)   Write a code segment that prints "attending" if rsvp is true and prints "not attending" otherwise.
+
+    if(rsvp){
+        System.out.println("attending");
+        }
+    else{
+        System.out.println("not attending");
+        }
+
+(b)   Write a code segment that prints the food item associated with selection. For example, if selection is 3, the code segment should print "pasta".
+
+    switch(selection){
+        case 1:
+            System.out.println("beef");
+            break;
+
+        case 2:
+            System.out.println("chicken");
+            break;
+
+        case 3:
+            System.out.println("pasta");
+            break;
+
+        default:
+            System.out.println("fish")
+            break;
+
+(c)   Write a code segment that will store a dinner selection in option1 based on the values of rsvp and selection. The intended behavior of the code segment is described below.
+
+If rsvp is true, the code segment should store in option1 a string indicating the person’s attendance and food choice. For example, if rsvp is true and selection is 1, the following string should be stored in option1.
+
+"Thanks for attending. You will be served beef."
+
+If rsvp is false, the following string should be stored in option1, regardless of the value of selection.
+
+"Sorry you can't make it."
+
+
+   if(rsvp){
+   System.out.println("attending");
+    }
+   else{
+        System.out.println("not attending");
+        }
+
+
+(d)   Write a code segment that will print true if the strings option1 and option2 contain the same values and will print false otherwise.
+
+
+    if(option1 == option2){
+        return True;
+        }
+    else{
+        return False;
+    }
+
+
+Question 2
+
+(a) public class Draw {
+
+    public void drawLine(int x1, int y1, int x2, int y2) {
+
+    public void drawSquare(int x, int y, int len) {
+    int xsum = x + len; int ydiff = y - len;
+    if (xsum > 10) xsum = 10 - x; if (ydiff < 0) ydiff = 0 - y;
+    if ((x - xsum) > (y - ydiff)) xsum = ydiff+x-y;
+    else ydiff = xsum+y-x;
+
+    drawLine(x, y, x, ydiff);
+    drawLine(x, y, xsum, y);
+    drawLine(x, ydiff, xsum, ydiff);
+    drawLine(xsum, y, xsum, ydiff);
+    	}
+
+    int side = xsum - x;
+    System.out.println("side length = " + side + ", area = " + Math.pow(side, 2));
+    }
+    }
+

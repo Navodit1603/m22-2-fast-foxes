@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      xmlns="http://www.w3.org/1999/html"
+      layout:decorate="~{layout}" lang="en">
+
+<head>
+  <div layout:fragment="metadata" th:remove="tag">
+    <!-- Start of head content specific to page -->
+    <title>Greet</title>
+    <link rel="stylesheet" type="text/css" href="/css/greet.css">
+    <!-- End of head content specific to page -->
+  </div>
+  <link rel="stylesheet" href="greet.css">
+</head>
+
+<body><div layout:fragment="content" th:remove="tag">
+  <!-- Start of body content specific to page -->
+  <style>
+    body {
+      background: linear-gradient(to left, #418fbf, #4CAF50);
+    }
+    * {
+      box-sizing: border-box;
+      font-color: #fff;
+    }
+
+    #myInput {
+      background-color: #fff;
+      background-position: 30px 12px;
+      background-repeat: no-repeat;
+      width: 100%;
+      font-family: "Javanese Text";
+      font-size: 16px;
+      font-color: #fff;
+      padding: 12px 20px 12px 40px;
+      border: 1px solid #ddd;
+      margin-bottom: 0px;
+      text-align:center;
+      border-radius: 25px;
+    }
+
+    #myUL {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      text-align:center;
+    }
+
+    #myUL li a {
+      border: 1px solid #ddd;
+      margin-top: -1px; /* Prevent double borders */
+      background: linear-gradient(to left, #418fbf, #4CAF50);
+      padding: 12px;
+      text-decoration: none;
+      font-family: "Javanese Text";
+      font-size: 18px;
+      color: white;
+      display: block
+    }
+
+    #myUL li a:hover:not(.header) {
+      background-color: #63c0f5;
+    }
+  </style>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  <h2 style="text-align:center; font-family:'Javanese Text'";> Crypto, Stocks, Bonds</h2>
+  </br>
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for topic" title="Type in a topic">
+
+  <ul id="myUL">
+    <li><a href="https://www.youtube.com/watch?v=4e_o4Xar5t0">Stocks - What are Stocks? </a></li>
+    <li><a href="https://www.youtube.com/watch?v=6Gu2QMTAkEU">Crypto - What is Cryptocurrency? </a></li>
+    <li><a href="https://www.youtube.com/watch?v=Sbp_t4guM8g">Stocks - Investing with Stocks </a></li>
+    <li><a href="https://www.youtube.com/watch?v=KITfNdmG9bk">Crypto - Crypto Trends </a></li>
+    <li><a href="https://www.youtube.com/watch?v=IuyejHOGCro">Bonds - What are Bonds? </a></li>
+    <li><a href="https://www.youtube.com/watch?v=wQYRkOtNAsU">Bonds - Bond Market </a></li>
+    <li><a href="https://www.investor.gov/introduction-investing/investing-basics/investment-products/stocks">Stocks - General Information </a></li>
+    <li><a href="https://www.investor.gov/introduction-investing/investing-basics/investment-products/bonds-or-fixed-income-products/bonds">Bonds - General Information </a></li>
+    <li><a href="https://www.forbes.com/advisor/investing/what-is-cryptocurrency/">Crypto Currency - General Information </a></li>
+    <li><a href="https://www.nerdwallet.com/article/investing/how-to-interpret-stock-charts-and-data">Stocks - How to read the Stock Market </a></li>
+
+  <script>
+    function myFunction() {
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myUL");
+      li = ul.getElementsByTagName("li");
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+  <!-- End of body content specific to page -->
+</div></body>
+
+</html>

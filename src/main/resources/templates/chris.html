@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+
+<head>
+
+    <style>
+        #customers {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 50%;
+        }
+
+        #customers td, #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+        #customers tr:hover {background-color: #ddd;}
+
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #04AA6D;
+            color: white;
+        }
+    </style>
+
+    <div layout:fragment="metadata" th:remove="tag">
+        <meta charset="UTF-8">
+        <title>Chris About Me</title>
+    </div>
+</head>
+
+<body>
+
+<div layout:fragment="content" th:remove="tag">
+    <div>
+        <br>
+        <br>
+        <br>
+        <h1 style="color: white">It's Chris</h1>
+        <img id="img1" src="images/chris/chrismaskoff.jpg" onclick="toggle()"
+             alt="mask_off"
+             style="height: 360px; width: 640px; display: block; margin-left: auto; margin-right: auto;">
+    </div>
+    <script>
+        function toggle(){
+            var imgsrc = document.getElementById("img1").src;
+            if (imgsrc.indexOf("images/chris/chrismaskoff.jpg")!== -1){
+                document.getElementById("img1").src = "images/chris/chrismaskon.jpg";
+            }
+            else{
+                document.getElementById("img1").src = "images/chris/chrismaskoff.jpg"
+            }
+        }
+    </script>
+
+    <div>
+        <form action="/chris" method="GET" id="triviaForm">
+            <button style="width:200px" class="reviewSubmit">Refresh!</button>
+        </form>
+    </div>
+    <br>
+    <div>
+        <h1>About Me</h1>
+        <hr>
+        <h2 style="font-size: 24px">Hello There! My name is Christopher Duroiu and I am a junior at Del Norte High School.
+            Aside from CSA, I like to swim, lift, and hang out with friends.</h2>
+    </div>
+    <br>
+
+    <h1>A Fancy Table</h1>
+
+    <table id="customers">
+        <tr>
+            <th>Category</th>
+            <th>Question</th>
+            <th>Answer</th>
+        </tr>
+        <tr>
+            <td th:text="${stats[0].category}"> </td>
+            <td th:text="${stats[0].question}"> </td>
+            <td th:text="${stats[0].answer}"></td>
+        </tr>
+    </table>
+
+    <br>
+    <br>
+    <br>
+
+    <h2>FRQs</h2>
+    <br>
+    <a href="http://localhost:8080/comment">FRQ 2</a>
+    <br>
+    <a href="http://localhost:8080/draw">FRQ 3</a>
+    <br>
+    <a href="http://localhost:8080/frq4">FRQ 4</a>
+    <br>
+    <a href="https://replit.com/@ChrisD9/frq5#Main.java">FRQ 5</a>
+    <br>
+    <a href="https://replit.com/@ChrisD9/ingidentifier#Main.java">FRQ 6</a>
+    <br>
+    <a href="https://replit.com/@ChrisD9/frq7#Main.java">FRQ 7</a>
+</div>
+
+
+</body>
+</html>

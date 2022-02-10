@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+
+<head>
+    <div layout:fragment="metadata" th:remove="tag">
+        <title>Navodit's FRQ7</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+    </div>
+    <!-- layout::fragment="content" is heart of ThymeLeaf layout -->
+    <div layout:fragment="content" th:remove="tag">
+        <!-- Start of body content specific to page -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </div>
+
+
+</head>
+<body style="padding: 24px">
+<div layout:fragment="content" th:remove="tag">
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+        <h3 style="font-size: 72px">FRQ7</h3>
+        <h2>User can input their name and the program will generate usernames with their name with a random number.</h2>
+        <hr>
+    </div>
+<form action="/navodit/frq7" method="GET" id="frq7" style="text-align: center">
+    <h1 for="frq2Field">Username</h1>
+    <br>
+    <br>
+    <input type="text" name="first" placeholder="First Name" style="width: 500px; height: 50px">
+    <br>
+    <br>
+    <input type="text" name="last" placeholder="Last Name" style="width: 500px; height: 50px">
+    <br>
+    <br>
+    <div>
+        <button style="width:200px; background-color: #4CAF50; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 8px">
+            Submit</button>
+    </div>
+</form>
+<h2 th:each="user : ${list}">
+    <h2 th:text="${user}"></h2>
+</h2>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+        <script src="https://gist.github.com/Navodit1603/b1665b9266b63582e11fac36302c21dd.js"></script>
+    </div>
+</div>
+</body>
+</html>

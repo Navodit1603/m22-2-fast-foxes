@@ -1,0 +1,50 @@
+<!-- This page is illustrative and contains ideas about HTML formatting -->
+<!DOCTYPE HTML>
+<!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+
+<head><div layout:fragment="metadata" th:remove="tag">
+    <title>Intro</title>
+</div></head>
+
+<!-- layout::fragment="content" is heart of ThymeLeaf layout -->
+<body><div layout:fragment="content" th:remove="tag">
+<table class="table" style="transform: translateY(80px) ">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Symbol</th>
+        <th>Name</th>
+        <th>Rank</th>
+        <th>Price USD</th>
+        <th>Percent Change 24h</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="x: ${ls}">
+        <td>
+            <p th:text="${x.id}"></p>
+        </td>
+        <td>
+            <p th:text="${x.symbol}"></p>
+        </td>
+        <td>
+            <p th:text="${x.name}"></p>
+        </td>
+        <td>
+            <p th:text="${x.rank}"></p>
+        </td>
+        <td>
+            <p th:text="${x.price_usd}"></p>
+        </td>
+        <td>
+            <p th:text="${x.percent_change_24h}"></p>
+        </td>
+
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

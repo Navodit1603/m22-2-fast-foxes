@@ -6,7 +6,7 @@
 
 | Name | GitHub Username | Issues |
 | ------------- | ------------- | ------------- |
-| Navodit Maheshwari  |  Navodit1603  | |
+| [Navodit Maheshwari](https://github.com/Navodit1603)  |  Navodit1603  | |
 | Grace Le  | gracele246  | |
 | Tanmay Marwah | TMarwah | |
 

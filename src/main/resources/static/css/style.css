@@ -1,9 +1,9 @@
 body {
-  background-color: #418fbf;
+  background-color: #2e5470ff;
 }
 
 h1 {
-  color: black;
+  color: white;
 }
 
 p {
@@ -14,45 +14,4 @@ input {
   border-radius: 8px;
 }
 
-.reviewSubmit{
-  width:200px;
-  background-color: #4CAF50;
-  border: none; color: white;
-  padding: 15px 32px; text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 8px
-}
-/*# sourceMappingURL=style.css.map */
-body {
-  background-color: #418fbf;
-}
-
-h1 {
-  color: black;
-}
-
-p {
-  color: black;
-}
-
-input {
-  border-radius: 8px;
-}
-
-button{
-  width:200px;
-  background-color: #4CAF50;
-  border: none; color: white;
-  padding: 15px 32px; text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 8px
-}
 /*# sourceMappingURL=style.css.map */

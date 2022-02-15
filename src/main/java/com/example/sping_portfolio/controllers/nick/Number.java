@@ -6,14 +6,16 @@ import java.util.ArrayList;
 public class Number {
     // instance variables
     private int num;
-    public int index = -1;
+    private int index;
+    static int indexCount = 0;
 
     // Number has a zero Argument constructor
     // It initializes a random number between 3 and 36, ie the number of squirrels in class
     public Number() {
         // constructor
         num = (int) (33 * Math.random() + 3);
-        index++;
+        index = indexCount;
+        indexCount++;
     }
 
     // It contains a getter for the Random Number
@@ -34,11 +36,18 @@ public class Number {
 
         // Initialize 10 squirrels of class type Number
         // Insert Number instance into ArrayList Squirrel in least to greatest order by random number, mine required nested loops
-        for (int i = 0; i < 10; i++) {
+
+        Number firstsquirrel = new Number();
+        squirrels.add(firstsquirrel);
+        for (int i = 0; i < 9; i++) {
             Number squirrel = new Number();
             for (int j = 0; j < squirrels.size(); j++) {
-                if (squirrel.getNum() > squirrels.get(j).getNum()) {
-                    squirrels.add(squirrel);
+                if (squirrel.getNum() < squirrels.get(j).getNum()) {
+                    squirrels.add(j, squirrel);
+                    break;
+                }
+                if (j == squirrels.size()) {
+                    squirrels.add(0, squirrel);
                 }
             }
         }

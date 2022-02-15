@@ -1,10 +1,15 @@
 package com.example.sping_portfolio.controllers.navodit;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Random;
 
 public class Number {
 
-    int sq = 10;
+    int sq;
+
+    public Number(int squirrels){
+        sq = squirrels;
+    }
 
 
     public int[] MakeArray(){
@@ -18,13 +23,29 @@ public class Number {
         return array;
     }
 
-    public Sort(int[] list){
-       int n = list.length;
+    public int[] Sort(int[] list){
+        int n = list.length;
+        for(int i = 0; i < n-1; i++){
+            int min = i;
+            for(int j = i+1; j < n; j++){
+                if(list[j] < list[min])
+                    min = j;
+            }
+
+            int temp = list[min];
+            list[min] = list[i];
+            list[i] = temp;
+        }
+
+        return list;
 
     }
 
 
     public static void main(){
+        Number num = new Number(10);
+        int[] arr = num.MakeArray();
+        //int[] sorted = arr.Sort();
 
     }
 

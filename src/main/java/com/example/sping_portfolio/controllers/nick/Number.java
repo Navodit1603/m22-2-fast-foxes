@@ -5,15 +5,15 @@ import java.util.ArrayList;
 // Write a Class Number
 public class Number {
     // instance variables
-    private int num;
-    private int index;
-    static int indexCount = 0;
+    private final int num;
+    private final int index;
+    public static int indexCount = 0;
 
     // Number has a zero Argument constructor
     // It initializes a random number between 3 and 36, ie the number of squirrels in class
     public Number() {
         // constructor
-        num = (int) (33 * Math.random() + 3);
+        num = (int) (34 * Math.random() + 3);
         index = indexCount;
         indexCount++;
     }
@@ -37,17 +37,12 @@ public class Number {
         // Initialize 10 squirrels of class type Number
         // Insert Number instance into ArrayList Squirrel in least to greatest order by random number, mine required nested loops
 
-        Number firstsquirrel = new Number();
-        squirrels.add(firstsquirrel);
-        for (int i = 0; i < 9; i++) {
+        for (int i = 0; i < 10; i++) {
             Number squirrel = new Number();
-            for (int j = 0; j < squirrels.size(); j++) {
-                if (squirrel.getNum() < squirrels.get(j).getNum()) {
+            for (int j = 0; true; j++) {
+                if (j == squirrels.size() || (squirrel.getNum() < squirrels.get(j).getNum())) {
                     squirrels.add(j, squirrel);
                     break;
-                }
-                if (j == squirrels.size()) {
-                    squirrels.add(0, squirrel);
                 }
             }
         }

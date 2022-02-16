@@ -1,10 +1,12 @@
+package com.example.sping_portfolio.controllers.tanmay;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Random;
-class day {
     // Write a Class Number
-    public static class Number {
+
+class Number {
         // instance variables
         private int squirrelNum;
         private int sqIndex;
@@ -51,4 +53,3 @@ class day {
         }
 
     }
-}

@@ -19,9 +19,14 @@
 <div class="center">
 <div layout:fragment="content" th:remove="tag">
     <!-- Start of body content specific to page -->
+
     <div class="contact" style="height: 35vh;" >
         <div class="row justify-content-left">
             <form action="/comment" method="GET" id="greetForm">
+                <div>
+                    <h1>Feedback form</h1>
+                    <h1 style="font-size: 18px">Leave a review of our website and how we could improve it.</h1>
+                </div>
                 <div>
                     <label for="greetField">Username</label>
                     <input name="username" id="greetField">

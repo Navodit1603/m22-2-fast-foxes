@@ -15,9 +15,11 @@
 </div>
 
 </head>
-<body><div  layout:fragment="content" th:remove="tag">
+<body>
+<div class="center">
+<div layout:fragment="content" th:remove="tag">
     <!-- Start of body content specific to page -->
-    <div class="contact" style="height: 35vh;">
+    <div class="contact" style="height: 35vh;" >
         <div class="row justify-content-left">
             <form action="/comment" method="GET" id="greetForm">
                 <div>
@@ -55,6 +57,7 @@
             </form>
         </div>
     </div>
+</div>
     <!-- End of body content specific to page -->
 </div></body>
 

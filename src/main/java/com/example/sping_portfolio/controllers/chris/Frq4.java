@@ -1,15 +1,9 @@
 package com.example.sping_portfolio.controllers.chris;
 
-import com.example.sping_portfolio.controllers.chris.LongestChar;
-import com.example.sping_portfolio.controllers.chris.LongestCharv2;
-import com.example.sping_portfolio.controllers.chris.UserComment;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Controller  // HTTP requests are handled as a controller, using the @Controller annotation
 public class Frq4 {

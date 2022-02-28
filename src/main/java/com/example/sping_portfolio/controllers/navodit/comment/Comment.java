@@ -11,7 +11,7 @@ import java.util.List;
 @Controller  // HTTP requests are handled as a controller, using the @Controller annotation
 public class Comment {
 
-    List<UserComment> luc = new ArrayList<>();
+    List<UserComment> l = new ArrayList<>();
 
     @GetMapping("/comment")
     // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
@@ -25,13 +25,9 @@ public class Comment {
 
         uc.ChangeComment("time");
 
-        luc.add(uc);
+        l.add(uc);
 
-        //model.addAttribute("nameout", uc.GetUsername()); // MODEL is passed to html
-        //model.addAttribute("commentout", uc.GetComment()); // MODEL is passed to html
-        //model.addAttribute("dateout", uc.GetDate()); // MODEL is passed to html
-
-        model.addAttribute("luc", luc);
+        model.addAttribute("l", l);
 
         return "comment"; // returns HTML VIEW (greeting)
     }

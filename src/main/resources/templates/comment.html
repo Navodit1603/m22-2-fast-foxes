@@ -45,15 +45,15 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr th:each="x: ${luc}">
+                        <tr th:each="comm: ${l}">
                             <td>
-                                <p th:text="@{${x.GetUsername()}}"></p>
+                                <p th:text="@{${comm.GetUsername()}}"></p>
                             </td>
                             <td>
-                                <p th:text="@{${x.GetDate()}}"></p>
+                                <p th:text="@{${comm.GetDate()}}"></p>
                             </td>
                             <td>
-                                <p th:text="@{${x.GetComment()}}"></p>
+                                <p th:text="@{${comm.GetComment()}}"></p>
                             </td>
                         </tr>
                         </tbody>

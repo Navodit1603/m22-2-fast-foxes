@@ -41,7 +41,7 @@ public class UserController {
         // Redirect to next step
         //List<User> list = userSqlRepository.listAll();
         //model.addAttribute("list",list);
-        return "redirect:/student/login";
+        return "redirect:/student/reviews";
     }
 
     @GetMapping("/student/test")

@@ -16,8 +16,8 @@
 <br>
 <br>
 
-<h1 style="color: white">Welcome</h1>
-<h3 style="color: white">Comment your name, Game you played, and give back feedback on the game!</h3>
+<h1 style="color: white">Welcome!</h1>
+<h3 style="color: white">Comment your name, game you played, and give back feedback on the game!</h3>
 
 
 <form action="#" th:action="@{/student/load}" th:object="${user}" method="POST">
@@ -25,17 +25,17 @@
 
     <div class="form-group mb-2 mr-sm-2">
         <label for="name">Name:  </label>
-        <input type="text" th:field="*{name}" id="name">
+        <input style="width: 900px" type="text" th:field="*{name}" id="name">
         <!--   <small th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Email Error</small> -->
     </div>
     <div class="input-group mb-2 mr-sm-2">
         <label for="teamName">Game Name:   </label>
-        <input type="text" th:field="*{teamName}" id="teamName">
+        <input style="width: 900px" type="text" th:field="*{teamName}" id="teamName">
         <!--<small th:if="${#fields.hasErrors('teamName')}" th:errors="*{teamName}">teamName Error</small> -->
     </div>
     <div class="input-group mb-2 mr-sm-2">
         <label for="salary">Feedback:   </label>
-        <input type="text" th:field="*{salary}" id="salary">
+        <input style="width: 900px"type="text" th:field="*{salary}" id="salary">
         <!--    <small th:if="${#fields.hasErrors('salary')}" th:errors="*{salary}">salary Error</small> -->
     </div>
     <button type="submit" class="btn btn-primary">Add</button>

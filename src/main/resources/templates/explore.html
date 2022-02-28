@@ -166,73 +166,70 @@
     </head>
     <body>
 
-    <h2 style="text-align:center; color:white;" >Top 10 Most Popular Games</h2>
-
-    <div class="slideshow-container">
-        <div class="mySlides1">
-            <img src="images/banner/valorant.png" style="width:100%">
-        </div>
-
-        <div class="mySlides1">
-            <img src="images/banner/minecraft.jpg" style="width:100%">
-        </div>
-
-        <div class="mySlides1">
-            <img src="images/banner/forza.jpeg" style="width:100%">
-        </div>
-
-        <div class="mySlides1">
-            <img src="images/banner/elden.jpeg" style="width:100%">
-        </div>
-
-        <div class="mySlides1">
-            <img src="images/banner/halo.jpeg" style="width:100%">
-        </div>
-
-        <div class="mySlides1">
-            <img src="images/banner/animal.jpeg" style="width:100%">
-        </div>
-
-
-        <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
-    </div>
-    <script>
-        var slideIndex = [1,1];
-        var slideId = ["mySlides1", "mySlides2"]
-        showSlides(1, 0);
-        showSlides(1, 1);
-
-        function plusSlides(n, no) {
-            showSlides(slideIndex[no] += n, no);
+    <h2 style="text-align:center; color:white;" >Can't decide? Explore some games!</h2>
+    <script type="text/javascript">
+        var newReleases = [
+            "https://www.google.com/search?q=gran+turismo+7",
+            'https://www.google.com/search?q=elden+ring',
+            'https://www.google.com/search?q=pokemon+legends+arceus',
+            'https://www.google.com/search?q=grid+legends',
+            'https://www.google.com/search?q=horizon+forbidden+west',
+            'https://www.google.com/search?q=kingdom+of+fighters+XV',
+            'https://www.google.com/search?q=sifu',
+            'https://www.google.com/search?q=dying+light+2',
+        ];
+        function goNew() {
+            var newRelease = newReleases[Math.floor(Math.random()*newReleases.length)];
+            window.location = newRelease; // redirect
+        };
+        var freeReleases = [
+            "https://www.google.com/search?q=lost+ark",
+            'https://www.google.com/search?q=fortnite',
+            'https://www.google.com/search?q=valorant',
+            'https://www.google.com/search?q=apex+legends',
+            'https://www.google.com/search?q=halo+infinite',
+            'https://www.google.com/search?q=league+of+legends',
+            'https://www.google.com/search?q=destiny+2',
+            'https://www.google.com/search?q=genshin+impact',
+        ];
+        function goFree() {
+            var freeGame = freeReleases[Math.floor(Math.random()*freeReleases.length)];
+            window.location = freeGame; // redirect
         }
-
-        function showSlides(n, no) {
-            var i;
-            var x = document.getElementsByClassName(slideId[no]);
-            if (n > x.length) {slideIndex[no] = 1}
-            if (n < 1) {slideIndex[no] = x.length}
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            x[slideIndex[no]-1].style.display = "block";
+        var topRated = [
+            "https://www.google.com/search?q=gta+V",
+            'https://www.google.com/search?q=half+life+2',
+            'https://www.google.com/search?q=legend+of+zelda+breath+of+the+wild',
+            'https://www.google.com/search?q=portal+2',
+            'https://www.google.com/search?q=resident+evil',
+            'https://www.google.com/search?q=red+dead+redemption+2',
+            'https://www.google.com/search?q=legend+of+zelda+ocarina+of+time',
+            'https://www.google.com/search?q=god+of+war',
+        ];
+        function goTop() {
+            var topRate = topRated[Math.floor(Math.random()*topRated.length)];
+            window.location = topRate; // redirect
+        }
+        window.onblur = function () {
+            // do some stuff after tab was changed e.g.
+            alert('Did you find that game interesting? Make sure to rate it!');
         }
     </script>
+    <script type="text/javascript">
+
+    </script>
+
 
     <br>
     <br>
     <br>
     <br>
-    <div class="center">
-        <div>
-            <button class="button" style="background-color: #4a86e8ff;">New Releases</button>
-            <button class="button" style="background-color: #e69138ff;">Free Games</button>
-        </div>
-        <div>
-            <button class="button" style="background-color: #6aa84fff;">Top Rated</button>
-            <button class="button" style="background-color: #cc0000ff;">Browse Games</button>
-        </div>
+    <div class="btn-group" style="height:25%; width:100%">
+        <button class="btn btn-group-lg" style="background-color: #4a86e8ff;" onclick="goNew()">New Releases</button>
+        <button class="btn btn-group-lg" style="background-color: #e69138ff;" onclick="goFree()">Top Free</button>
+        <button class="btn btn-group-lg" style="background-color: #6aa84fff;" onclick="goTop()">Top Rated</button>
     </div>
+
 
     </body>
     </html>

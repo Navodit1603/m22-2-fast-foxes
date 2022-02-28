@@ -5,7 +5,7 @@ $p : black;
 
 body{
   background-color: $color;
-  height: 200%;
+  height: 250%;
 }
 
 h1{
@@ -36,10 +36,10 @@ p{
 .button {
   border: none;
   color: white;
-  padding: 16px 32px;
+  //padding-right: 36px;
   text-align: center;
-  width: 20%;
-  height: 500px;
+  width: 50%;
+  height: 200px;
   border-radius: 20px;
   //margin-right: 40px;
   font-size: 40px;

@@ -29,14 +29,14 @@
         <!--   <small th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Email Error</small> -->
     </div>
     <div class="input-group mb-2 mr-sm-2">
-        <label for="teamName">Game Name:   </label>
-        <input style="width: 900px" type="text" th:field="*{teamName}" id="teamName">
-        <!--<small th:if="${#fields.hasErrors('teamName')}" th:errors="*{teamName}">teamName Error</small> -->
-    </div>
-    <div class="input-group mb-2 mr-sm-2">
-        <label for="salary">Feedback:   </label>
+        <label for="salary">Game Name:   </label>
         <input style="width: 900px"type="text" th:field="*{salary}" id="salary">
         <!--    <small th:if="${#fields.hasErrors('salary')}" th:errors="*{salary}">salary Error</small> -->
+    </div>
+    <div class="input-group mb-2 mr-sm-2">
+        <label for="teamName">Feedback:   </label>
+        <input style="width: 900px" type="text" th:field="*{teamName}" id="teamName">
+        <!--<small th:if="${#fields.hasErrors('teamName')}" th:errors="*{teamName}">teamName Error</small> -->
     </div>
     <button type="submit" class="btn btn-primary">Add</button>
 

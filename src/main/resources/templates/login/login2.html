@@ -24,18 +24,18 @@
 
 
     <div class="form-group mb-2 mr-sm-2">
-        <label for="name">name:</label>
+        <label for="name">Name:  </label>
         <input type="text" th:field="*{name}" id="name">
         <!--   <small th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Email Error</small> -->
     </div>
     <div class="input-group mb-2 mr-sm-2">
-        <label for="teamName">teamName:</label>
+        <label for="teamName">Game Name:   </label>
         <input type="text" th:field="*{teamName}" id="teamName">
         <!--<small th:if="${#fields.hasErrors('teamName')}" th:errors="*{teamName}">teamName Error</small> -->
     </div>
     <div class="input-group mb-2 mr-sm-2">
-        <label for="salary">salary:</label>
-        <input type="number" th:field="*{salary}" id="salary">
+        <label for="salary">Feedback:   </label>
+        <input type="text" th:field="*{salary}" id="salary">
         <!--    <small th:if="${#fields.hasErrors('salary')}" th:errors="*{salary}">salary Error</small> -->
     </div>
     <button type="submit" class="btn btn-primary">Add</button>
@@ -48,10 +48,6 @@
 -->
 </form>
 
-
-
-<div class="row justify-content-md-center">
-    <a th:href="@{/student/test}">Login Now!</a>
 </div>
 </html>
 

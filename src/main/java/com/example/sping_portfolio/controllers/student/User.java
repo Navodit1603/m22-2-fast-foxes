@@ -12,13 +12,13 @@ public class User {
     private Long id;
     private String name;
     private String teamName;
-    private Integer salary;
+    private String salary;
 
     public User() {
 
     }
 
-    public User(String name, String teamName, Integer salary) {
+    public User(String name, String teamName, String salary) {
         this.name = name;
         this.teamName = teamName;
         this.salary = salary;
@@ -48,11 +48,11 @@ public class User {
         this.teamName = teamName;
     }
 
-    public Integer getSalary() {
+    public String getSalary() {
         return salary;
     }
 
-    public void setSalary(Integer salary) {
+    public void setSalary(String salary) {
         this.salary = salary;
     }
 }

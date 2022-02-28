@@ -23,7 +23,7 @@ public class UserController {
     private UserJpaRespository userJpaRespository;
     private UserSqlRespository userSqlRespository;
 
-    @GetMapping("/student/login")
+    @GetMapping("/student/reviews")
     public String grace(Model model) {
         List<User> users = userJpaRespository.findAll();
         model.addAttribute("message", "Login Test");

@@ -15,7 +15,7 @@
 </div>
 
 </head>
-<body>
+<body style="padding-left: 24px">
 <div class="center">
 <div layout:fragment="content" th:remove="tag">
     <!-- Start of body content specific to page -->
@@ -27,8 +27,9 @@
                     <input name="username" id="greetField">
                     <div></div>
                     <label for="greetField1">Feedback</label>
-                    <input name="comment" id="greetField1">
-                    <button>CLICK ME</button>
+                    <input style="width: 900px;" name="comment" id="greetField1">
+                    <div></div>
+                    <button class="reviewSubmit">CLICK ME</button>
 
                     <table class="table">
                         <thead>

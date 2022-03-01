@@ -1,124 +1,111 @@
-<!DOCTYPE html>
+<!-- This page is illustrative and contains ideas about HTML formatting -->
+<!DOCTYPE HTML>
+<!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
 <html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
       layout:decorate="~{layout}" lang="en">
 
-<head>
-    <div layout:fragment="metadata" th:remove="tag">
-        <title>Top Rated</title>
+<head><div layout:fragment="metadata" th:remove="tag">
+    <title>Top Rated</title>
+</div>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
-
-    </div>
-    <!-- layout::fragment="content" is heart of ThymeLeaf layout -->
-    <div layout:fragment="content" th:remove="tag">
-        <!-- Start of body content specific to page -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </div>
-    <meta charset="UTF-8">
-    <title>Top Rated Games</title>
 </head>
 
-<body style="padding: 24px">
-
+<!-- layout::fragment="content" is heart of ThymeLeaf layout -->
+<body>
 <div layout:fragment="content" th:remove="tag">
+    <!-- Start of body content specific to page -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <br>
     <br>
     <br>
+    <br>
+
+    </head>
+    <body>
+    <style>
+        .checked {
+            color: orange;
+        }
+    </style>
+
     <br>
     <h1>Top Rated Games</h1>
     <br>
     <br>
-    <table>
-        <th>Name</th>
-        <th>Rating</th>
-        <th>Rate</th>
+    <table class="table">
+        <thead>
         <tr>
-            <td>Game 1</td>
-            <td>5/5</td>
-            <td><div class="rate">
-                <input type="radio" id="star5" name="rate" value="5" />
-                <label for="star5" title="text">5 stars</label>
-                <input type="radio" id="star4" name="rate" value="4" />
-                <label for="star4" title="text">4 stars</label>
-                <input type="radio" id="star3" name="rate" value="3" />
-                <label for="star3" title="text">3 stars</label>
-                <input type="radio" id="star2" name="rate" value="2" />
-                <label for="star2" title="text">2 stars</label>
-                <input type="radio" id="star1" name="rate" value="1" />
-                <label for="star1" title="text">1 star</label>
-            </div></td>
+            <th scope="col">Game</th>
+            <th scope="col">Rating</th>
+            <th scope="col">Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td scope="col"><img src="images/banner/gta5.jpg" style="width:500px"/></td>
+            <td>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span></td>
+            <td>Grand Theft Auto V is an action-adventure game played from either a third-person or first-person perspective. Players complete missions—linear scenarios with set objectives—to progress through the story. Outside of the missions, players may freely roam the open world. Composed of the San Andreas open countryside area, including the fictional Blaine County, and the fictional city of Los Santos, the world is much larger in area than earlier entries in the series. It may be fully explored after the game's beginning without restriction, although story progress unlocks more gameplay content.</td>
+        </tr>
+        <tr>
+            <td><img src="images/banner/minecraft.jpg" style="width:500px"/></td>
+            <td>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span> </td>
+            <td>Minecraft is a sandbox video game developed by the Swedish video game developer Mojang Studios. The game was created by Markus "Notch" Persson in the Java programming language. Following several early private testing versions, it was first made public in May 2009 before fully releasing in November 2011, with Jens "Jeb" Bergensten then taking over development. Minecraft has since been ported to several other platforms and is the best-selling video game of all time, with over 238 million copies sold and nearly 140 million monthly active users as of 2021.
+
+                In Minecraft, players explore a blocky, procedurally generated 3D world with virtually infinite terrain, and may discover and extract raw materials, craft tools and items, and build structures, earthworks and simple machines. Depending on game mode, players can fight computer-controlled mobs, as well as cooperate with or compete against other players in the same world. Game modes include a survival mode, in which players must acquire resources to build the world and maintain health, and a creative mode, where players have unlimited resources and access to flight. Players can modify the game to create new gameplay mechanics, items, and assets.</td>
+        </tr>
+        <tr>
+            <td><img src="images/banner/wiisports.webp" style="width:500px"/></td>
+            <td>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span> </td>
+            <td>Wii Sports consists of five separate sports games—tennis, baseball, bowling, golf, and boxing—accessed from the main menu. The games use the motion sensor capabilities of the Wii Remote to control the player's dominant arm and/or the appropriate sports equipment it wields. Boxing utilizes both Wii Remote and Nunchuk gestures to control both of the player's arms. The player moves the remote in a similar manner to how the separate games are played in real life; for example, holding and swinging the Wii Remote like a golf club, baseball bat, tennis racket or bowling ball. Some aspects of the gameplay are computer controlled. In tennis, player movement is controlled by the Wii, while the swinging of the racket is controlled by the player. Baseball consists of batting and pitching, with all of the fielding and baserunning handled by the computer. Due to their turn-based nature, golf and bowling support hotseat multiplayer and can be played with just one Wii Remote that can be shared among players.</td>
+        </tr>
+        <tr>
+            <td><img src="images/banner/hitman3.jpg" style="width:500px"/></td>
+            <td>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span> </td>
+            <td>Hitman 3 (stylized as HITMAN III) is a 2021 stealth game developed and published by IO Interactive. It is the sequel to the 2018 video game Hitman 2, the eighth main installment in the Hitman series and the third and final entry in the World of Assassination trilogy. In the single-player story, the game concludes the plot arc started in Hitman and follows the genetically-engineered assassin Agent 47 and his allies as they hunt down the Partners, the leaders of the secretive organization Providence controlling the world's affairs.
+
+                The game is presented from a third-person perspective, with a focus on interactive elements in 47's environment. Within each map, 47 can walk around the map freely. The player can complete challenges within each mission or complete side missions usually with one fixed target that get progressively harder known as "escalations" in order to unlock new items.</td>
+        </tr>
+        <tr>
+            <td><img src="images/banner/smash.jpg" style="width:500px"/></td>
+            <td>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span> </td>
+            <td>Super Smash Bros. is a crossover fighting game series published by Nintendo, and primarily features characters from various Nintendo franchises. The series was created by Masahiro Sakurai, who has directed every game in the series. The gameplay objective differs from that of traditional fighters in that the aim is to increase damage counters and knock opponents off the stage instead of depleting life bars.
+
+                The original Super Smash Bros. was released in 1999 for the Nintendo 64. The series achieved even greater success with the release of Super Smash Bros. Melee, which was released in 2001 for the GameCube and became the bestselling game on that system. A third installment, Super Smash Bros. Brawl, was released in 2008 for the Wii. Although HAL Laboratory had been the developer for the first two games, the third game was developed through the collaboration of several companies. The fourth installment, Super Smash Bros. for Nintendo 3DS and Wii U, was released in 2014 for the Nintendo 3DS and Wii U, respectively. The 3DS installment was the first for a handheld platform. A fifth installment, Super Smash Bros. Ultimate, was released in 2018 for the Nintendo Switch.</td>
         </tr>
 
-        <tr>
-            <td>Game 2</td>
-            <td>5/5</td>
-            <td><div class="rate">
-                <input type="radio" id="star5" name="rate" value="5" />
-                <label for="star5" title="text">5 stars</label>
-                <input type="radio" id="star4" name="rate" value="4" />
-                <label for="star4" title="text">4 stars</label>
-                <input type="radio" id="star3" name="rate" value="3" />
-                <label for="star3" title="text">3 stars</label>
-                <input type="radio" id="star2" name="rate" value="2" />
-                <label for="star2" title="text">2 stars</label>
-                <input type="radio" id="star1" name="rate" value="1" />
-                <label for="star1" title="text">1 star</label>
-            </div></td>
-        </tr>
-
-        <tr>
-            <td>Game 3</td>
-            <td>5/5</td>
-            <td><div class="rate">
-                <input type="radio" id="star5" name="rate" value="5" />
-                <label for="star5" title="text">5 stars</label>
-                <input type="radio" id="star4" name="rate" value="4" />
-                <label for="star4" title="text">4 stars</label>
-                <input type="radio" id="star3" name="rate" value="3" />
-                <label for="star3" title="text">3 stars</label>
-                <input type="radio" id="star2" name="rate" value="2" />
-                <label for="star2" title="text">2 stars</label>
-                <input type="radio" id="star1" name="rate" value="1" />
-                <label for="star1" title="text">1 star</label>
-            </div></td>
-        </tr>
-
-        <tr>
-            <td>Game 4</td>
-            <td>5/5</td>
-            <td><div class="rate">
-                <input type="radio" id="star5" name="rate" value="5" />
-                <label for="star5" title="text">5 stars</label>
-                <input type="radio" id="star4" name="rate" value="4" />
-                <label for="star4" title="text">4 stars</label>
-                <input type="radio" id="star3" name="rate" value="3" />
-                <label for="star3" title="text">3 stars</label>
-                <input type="radio" id="star2" name="rate" value="2" />
-                <label for="star2" title="text">2 stars</label>
-                <input type="radio" id="star1" name="rate" value="1" />
-                <label for="star1" title="text">1 star</label>
-            </div></td>
-        </tr>
-
-        <tr>
-            <td>Game 5</td>
-            <td>5/5</td>
-            <td><div class="rate">
-                <input type="radio" id="star5" name="rate" value="5" />
-                <label for="star5" title="text">5 stars</label>
-                <input type="radio" id="star4" name="rate" value="4" />
-                <label for="star4" title="text">4 stars</label>
-                <input type="radio" id="star3" name="rate" value="3" />
-                <label for="star3" title="text">3 stars</label>
-                <input type="radio" id="star2" name="rate" value="2" />
-                <label for="star2" title="text">2 stars</label>
-                <input type="radio" id="star1" name="rate" value="1" />
-                <label for="star1" title="text">1 star</label>
-            </div></td>
-        </tr>
+        </tbody>
     </table>
+
+    </body>
 </div>
+
 </body>
+
 </html>
+
+

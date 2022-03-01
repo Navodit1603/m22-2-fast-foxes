@@ -1,124 +1,110 @@
-<!DOCTYPE html>
+<!-- This page is illustrative and contains ideas about HTML formatting -->
+<!DOCTYPE HTML>
+<!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
 <html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
       layout:decorate="~{layout}" lang="en">
 
-<head>
-    <div layout:fragment="metadata" th:remove="tag">
-        <title>Free Games</title>
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
-
-    </div>
-    <!-- layout::fragment="content" is heart of ThymeLeaf layout -->
-    <div layout:fragment="content" th:remove="tag">
-        <!-- Start of body content specific to page -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </div>
-    <meta charset="UTF-8">
+<head><div layout:fragment="metadata" th:remove="tag">
     <title>Free Games</title>
+</div>
+
 </head>
 
-<body style="padding: 24px">
-
+<!-- layout::fragment="content" is heart of ThymeLeaf layout -->
+<body>
 <div layout:fragment="content" th:remove="tag">
+    <!-- Start of body content specific to page -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <br>
     <br>
     <br>
     <br>
-    <h1>Top Free Games</h1>
-    <br>
-    <br>
-<table>
-    <th>Name</th>
-    <th>Rating</th>
-    <th>Rate</th>
-    <tr>
-        <td>Game 1</td>
-        <td>5/5</td>
-        <td><div class="rate">
-            <input type="radio" id="star5" name="rate" value="5" />
-            <label for="star5" title="text">5 stars</label>
-            <input type="radio" id="star4" name="rate" value="4" />
-            <label for="star4" title="text">4 stars</label>
-            <input type="radio" id="star3" name="rate" value="3" />
-            <label for="star3" title="text">3 stars</label>
-            <input type="radio" id="star2" name="rate" value="2" />
-            <label for="star2" title="text">2 stars</label>
-            <input type="radio" id="star1" name="rate" value="1" />
-            <label for="star1" title="text">1 star</label>
-        </div></td>
-    </tr>
 
-    <tr>
-        <td>Game 2</td>
-        <td>5/5</td>
-        <td><div class="rate">
-            <input type="radio" id="star5" name="rate" value="5" />
-            <label for="star5" title="text">5 stars</label>
-            <input type="radio" id="star4" name="rate" value="4" />
-            <label for="star4" title="text">4 stars</label>
-            <input type="radio" id="star3" name="rate" value="3" />
-            <label for="star3" title="text">3 stars</label>
-            <input type="radio" id="star2" name="rate" value="2" />
-            <label for="star2" title="text">2 stars</label>
-            <input type="radio" id="star1" name="rate" value="1" />
-            <label for="star1" title="text">1 star</label>
-        </div></td>
-    </tr>
+    </head>
+    <body>
+    <style>
+        .checked {
+            color: orange;
+        }
+    </style>
 
-    <tr>
-        <td>Game 3</td>
-        <td>5/5</td>
-        <td><div class="rate">
-            <input type="radio" id="star5" name="rate" value="5" />
-            <label for="star5" title="text">5 stars</label>
-            <input type="radio" id="star4" name="rate" value="4" />
-            <label for="star4" title="text">4 stars</label>
-            <input type="radio" id="star3" name="rate" value="3" />
-            <label for="star3" title="text">3 stars</label>
-            <input type="radio" id="star2" name="rate" value="2" />
-            <label for="star2" title="text">2 stars</label>
-            <input type="radio" id="star1" name="rate" value="1" />
-            <label for="star1" title="text">1 star</label>
-        </div></td>
-    </tr>
+    <br>
+    <h1>Free Games</h1>
+    <br>
+    <br>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Game</th>
+            <th scope="col">Rating</th>
+            <th scope="col">Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td scope="col"><img src="images/banner/wordle.png" style="width:500px"/></td>
+            <td>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span></td>
+            <td>Wordle, Josh Wardle’s stimulating and wildly popular daily word game, is joining The New York Times’s portfolio of original, engaging puzzle games that delight and challenge solvers every day.</td>
+        </tr>
+        <tr>
+            <td><img src="images/banner/rocket.jpg" style="width:500px"/></td>
+            <td>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span></td>
+            <td>Rocket League is a fantastical sport-based video game, developed by Psyonix (it’s “soccer with cars”). It
+                features a competitive game mode based on teamwork and outmaneuvering opponents. Players work with their team to advance the ball down the field, and score goals in their opponents’ net.
+                Rocket League is a technical game which involves both high-level dexterity and fast-paced gameplay.
+                While one of the most welcoming elements of the game is its accessibility and familiarity with
+                traditional sport (soccer), the best players are highly advanced and have fine-tuned their mechanics.</td>
+        </tr>
+        <tr>
+            <td><img src="images/banner/roblox.jpg" style="width:500px"/></td>
+            <td>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span></td>
+            <td>Roblox is an online game platform and game creation system developed by Roblox Corporation. It allows users to program games and play games created by other users. Created by David Baszucki and Erik Cassel in 2004 and released in 2006, the platform hosts user-created games of multiple genres coded in the programming language Lua. For most of Roblox's history, it was relatively small, both as a platform and a company. Roblox began to grow rapidly in the second half of the 2010s, and this growth has been accelerated by the COVID-19 pandemic.
 
-    <tr>
-        <td>Game 4</td>
-        <td>5/5</td>
-        <td><div class="rate">
-            <input type="radio" id="star5" name="rate" value="5" />
-            <label for="star5" title="text">5 stars</label>
-            <input type="radio" id="star4" name="rate" value="4" />
-            <label for="star4" title="text">4 stars</label>
-            <input type="radio" id="star3" name="rate" value="3" />
-            <label for="star3" title="text">3 stars</label>
-            <input type="radio" id="star2" name="rate" value="2" />
-            <label for="star2" title="text">2 stars</label>
-            <input type="radio" id="star1" name="rate" value="1" />
-            <label for="star1" title="text">1 star</label>
-        </div></td>
-    </tr>
+                Roblox is free-to-play, with in-game purchases available through a virtual currency called "Robux". As of August 2020, Roblox had over 164 million monthly active users, with it being played by over half of all children aged under 16 in the United States</td>
+        </tr>
+        <tr>
+            <td><img src="images/banner/apex.jpg" style="width:500px"/></td>
+            <td>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span></td></td></td>
+            <td>Apex Legends is an online multiplayer battle royale game featuring squads of three players using pre-made characters with distinctive abilities, called "Legends", similar to those of hero shooters.[1] Alternate modes have been introduced allowing for single and for two-player squads since the game's release.[2][3] The game is free-to-play and monetized through microtransactions and loot boxes, which allow the player to spend both real money and in-game currency on cosmetic items, such as outfits for the Legends and new colors for weapons.</td>
+        </tr>
+        <tr>
+            <td><img src="images/banner/genshin.jpg" style="width:500px"/></td>
+            <td><span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star "></span></td>
+            <td>Genshin Impact is an open-world action role-playing game that allows the player to control one of four interchangeable characters in a party. Switching between characters can be done quickly during combat, allowing the player to use several different combinations of skills and attacks. Characters may have their strengths enhanced in various ways, such as increasing a character's level and improving artifacts and the weapons that the character equips. In addition to exploration, the player can attempt various challenges for rewards. Scattered across Teyvat are bosses and challenges that reward highly valuable resources, such as Stormterror and the Electro Hypostasis, but claiming them uses up a currency called resin, which slowly regenerates over time. Completing these challenges grants the player progress towards increasing their Adventure Rank, which in turn unlocks new quests, challenges, and raises the World Level. The World Level is a measure of how strong the enemies within the world are and the rarity of rewards that defeating them gives.</td>
+        </tr>
 
-    <tr>
-        <td>Game 5</td>
-        <td>5/5</td>
-        <td><div class="rate">
-            <input type="radio" id="star5" name="rate" value="5" />
-            <label for="star5" title="text">5 stars</label>
-            <input type="radio" id="star4" name="rate" value="4" />
-            <label for="star4" title="text">4 stars</label>
-            <input type="radio" id="star3" name="rate" value="3" />
-            <label for="star3" title="text">3 stars</label>
-            <input type="radio" id="star2" name="rate" value="2" />
-            <label for="star2" title="text">2 stars</label>
-            <input type="radio" id="star1" name="rate" value="1" />
-            <label for="star1" title="text">1 star</label>
-        </div></td>
-    </tr>
-</table>
+        </tbody>
+    </table>
+
+    </body>
 </div>
+
 </body>
+
 </html>
+
+

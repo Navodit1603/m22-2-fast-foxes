@@ -1,20 +1,22 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
 <html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
       layout:decorate="~{layout}" lang="en">
 
-<head>
-    <div layout:fragment="metadata" th:remove="tag">
-        <title>Review Games</title>
-    </div>
+<head><div layout:fragment="metadata" th:remove="tag">
+    <title>Game Reviews</title>
+</div>
+
 </head>
 
-
-<body layout:fragment="content" th:remove="tag">
-
-<br>
-<br>
-<br>
-<br>
+<!-- layout::fragment="content" is heart of ThymeLeaf layout -->
+<body>
+<div layout:fragment="content" th:remove="tag">
+    <!-- Start of body content specific to page -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <br>
+    <br>
+    <br>
 
 <h1 style="color: white">Game Reviews</h1>
 
@@ -47,6 +49,6 @@
     </tbody>
 </table>
 
-</html>
+</html> -->
 
 

@@ -21,7 +21,7 @@ public class New {
     @GetMapping("/new")
     public String New(Model model) {
 
-            return "helloWorld";
+            return "newReleases";
     }
 }
 
